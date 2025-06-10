@@ -17,10 +17,9 @@ def get_num_characters(filepath: str) -> dict:
     count = defaultdict(int)
     for c in text:
         count[c] += 1
-    return count
+    return get_sorted_dict(count)
 
 
 def get_sorted_dict(count: dict) -> dict:
     sorted_count = dict(sorted(count.items(), key=lambda item: item[1], reverse=True))
-
     return sorted_count
